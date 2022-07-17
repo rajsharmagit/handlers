@@ -1,9 +1,9 @@
-- hosts: all
+- hosts: dev
   become: true
   tasks:
    - copy:
         content: "hello world"
-        dest: /tmp/abc.txt
+        dest: /var/www/html/index.html
 
      notify: restart_apache
 
